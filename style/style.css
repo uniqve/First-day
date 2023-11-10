@@ -7,6 +7,7 @@
 }
 *{
     color: white;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -18,6 +19,7 @@ html, body {
 
 .wrapper{
     max-width: 1320px;
+    height: 100%;
     margin: 0px auto;
 }
 .header{
@@ -317,10 +319,11 @@ button {
 
 .background-img{
   width: 100%;
-  height: 808px;
-  left: 0;
+  height: 100%;
   position: absolute;
-  z-index: -9;
+  left: 0;
+  z-index: -6;
+  border-radius: 0 0 50px 50px;
 }
 .container{
   display: flex;
@@ -398,9 +401,11 @@ button {
 
 .img-back{
   position: relative;
-  top: -5.4px;
+  left: 0;
+  top: 0;
   width: 630px;
-  height: 665px;
+  height: 670px;
+ 
 }
 
 
@@ -410,24 +415,277 @@ button {
   justify-content: space-between;
   display: none;
 }
-.countries{
-  
+.third-block{
+  display: flex;
+  justify-content: space-between;
+  width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.directions {
+  margin-top: 166px;
+}
 
+.countries{
+ margin-top: 161px;
 }
 .thailand{
   display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  background-color: #FFF;
+  height: 140px;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
 .france{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 140px;
+  background-color: #FFF;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
-.chech{
+.czech{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #FFF;
+  height: 140px;
+  border-radius: 20px;
+  overflow: hidden; 
+
+
+}
+
+
+.czech::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  filter: blur(20px); 
 }
 
 
 
 
+
+.second-section {
+  width: 100%;
+  height: 838px;
+}
+
+.second-section__background{
+width: 100%;
+height: 838px;
+background-color: #EDEFF6;
+border-radius: 0 0 100px 100px;
+position: absolute;
+left: 0;
+}
+
+.directions h2{
+  color: var(--special_orange, #FF8D30);
+  font-family: "Blogger Sans";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px; 
+  margin: 0 0 58px 0
+}
+.directions p{
+  width: 378px;
+  height: 165px;
+  color: var(--special_grey, #444);
+  font-family: "Blogger Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 33px; 
+  margin-bottom: 98px;
+}
 
 .second-btn{
-
+  display: flex;
+  justify-content: space-between;	
+  align-items: center;
+	box-sizing: border-box;
+	padding: 29px 73px 27px 32px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;  
+	border-radius: 20px;
+	width: 274px;
+  height: 80px;
+	line-height: 24px;
+	font-size: 24px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #1D2E5B;
+	background-color: #FFD74B;
+	position: relative;
+	overflow:hidden;
+	vertical-align: top;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation; 
+	z-index: 1;
 }
+.countries h4{
+  color: #000;
+  font-family: "Blogger Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+.countries p{
+  color: var(--special_grey, #444);
+  font-family: "Blogger Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  opacity: 0.3;
+  margin: 0;
+}
+.thailand__text, .france__text, .czech__text{
+  height: 95px;
+  padding-left: 29px;
+}
+
+.thailand__profile, .france__profile, .czech__profile{
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.img-flags{
+  position: absolute;
+  left: 72%;
+  max-width: 70px;
+  height: 47px;
+}
+
+.travelers h2{ 
+  color: var(--special_orange, #FF8D30);
+font-family: "Blogger Sans";
+font-size: 45px;
+font-style: normal;
+font-weight: 700;
+line-height: 45px; 
+margin-bottom: 55px;
+}
+
+
+.third-section{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #192144;
+  z-index: -5;
+}
+.travelers{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.travelers__cards{
+display: flex;
+margin-right: 60px;
+}
+
+
+
+.travelers__card{
+  width: 285px;
+  height: 483px;
+  background-color: #FFF;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.rating {
+ 
+  width: 30px;
+  height: 30px;
+  background-color: #fbd700;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.circle {
+  
+ 
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+}
+.person-image {
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  width: 100%;
+  height: 286px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.travelers__cards-text {
+  /* display: flex;
+  flex-direction: column;
+ align-content: flex-end;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%; */
+  border-radius: 0 0 20px 20px;
+  padding-top: 10px; 
+}
+.travelers__cards-text p, .icons{
+  color: #444444;
+}
+
+.person-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: #1D2E5B;
+}
+
+.hobbies {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #888;
+}
+
+.icons i {
+  margin-right: 10px;
+}
+
+
